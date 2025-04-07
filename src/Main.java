@@ -7,14 +7,17 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static boolean isPalindrome(int num) {
+        int temp = num;
         int reverse = 0;
         while (num != 0) {
-            reverse += reverse * 10 + num % 10;
+            reverse *= 10;
+            reverse += num % 10;
             num /= 10;
         }
-        if (reverse == num) {
+        if (reverse == temp) {
             return true;
-        }else {
+
+        }else{
             return false;
         }
     }
