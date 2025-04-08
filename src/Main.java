@@ -1,7 +1,7 @@
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Stream;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -31,12 +31,14 @@ public class Main {
 //        AlarmClock clock = new AlarmClock(updated);
 //        Thread thread = new Thread(clock);
 //        thread.start();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Entere a number and i will tell you is it palindrome or not:");
+//        Integer input = scanner.nextInt();
+//        System.out.println(isPalindrome(input));
 
-
-          Scanner scanner = new Scanner(System.in);
-          System.out.println("Entere a number and i will tell you is it palindrome or not:");
-          Integer input = scanner.nextInt();
-          System.out.println(isPalindrome(input));
-
+        Integer[] ints = {1,2,3,4,5,6,6,77,77,21,21,15,15,3,3,5};
+        String[] strs = {"a","d","e","d","k"};
+        List<Integer> list = new ArrayList<Integer>();
+        System.out.println(Arrays.stream(ints).distinct().toList());
     }
 }
